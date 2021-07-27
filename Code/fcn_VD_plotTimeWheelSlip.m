@@ -63,14 +63,14 @@ clf
 subplot(2,1,1)
 plot(time, wheel_slip(:,1), 'b', 'Linewidth', 1)
 grid on
-legend('front left wheel', 'Location', 'best')
+legend('front wheel', 'Location', 'best')
 ylabel('Wheel Slip [No Units]')
 ylim([min_value-offset max_value+offset])
 
 subplot(2,1,2)
 plot(time, wheel_slip(:,2), 'b', 'Linewidth', 1)
 grid on
-legend('front right wheel', 'Location', 'best')
+legend('rear wheel', 'Location', 'best')
 ylabel('Wheel Slip [No Units]')
 xlabel('Time [s]')
 ylim([min_value-offset max_value+offset])
