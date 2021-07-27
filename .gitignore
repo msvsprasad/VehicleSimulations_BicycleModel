@@ -1,0 +1,5 @@
+*/slprj/*
+slprj/
+*.slxc
+*.asv
+simulink_db_test_liming/*.asv

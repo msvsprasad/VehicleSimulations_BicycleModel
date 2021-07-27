@@ -5,13 +5,13 @@ function fcn_VD_plotTimeAligningMoment(time, aligning_moment, varargin)
 %
 % Inputs:
 %   time: A Nx1 vector of time [sec]
-%   aligning_moment: A Nx4 matrix of aligning moment [Nm]
+%   aligning_moment: A Nx2 matrix of aligning moment [Nm]
 %
 % Returned Results:
 %   A plot
 %
 % Author: Satya Prasad
-% Created: 2021_07_03
+% Created: 2021_07_26
 % 
 
 %% Check input arguments
@@ -60,31 +60,18 @@ width = 600; height = 400; right = 100; bottom = 400;
 set(gcf, 'position', [right, bottom, width, height])
 clf
 
-subplot(2,2,1)
+subplot(2,1,1)
 plot(time, aligning_moment(:,1), 'b', 'Linewidth', 1)
 grid on
-legend('front left wheel', 'Location', 'best')
+legend('front wheel', 'Location', 'best')
 ylabel('Aligning Moment [Nm]')
 ylim([min_value-offset max_value+offset])
 
-subplot(2,2,2)
+subplot(2,1,2)
 plot(time, aligning_moment(:,2), 'b', 'Linewidth', 1)
 grid on
-legend('front right wheel', 'Location', 'best')
-ylim([min_value-offset max_value+offset])
-
-subplot(2,2,3)
-plot(time, aligning_moment(:,3), 'b', 'Linewidth', 1)
-grid on
-legend('rear left wheel', 'Location', 'best')
+legend('rear wheel', 'Location', 'best')
 ylabel('Aligning Moment [Nm]')
-xlabel('Time [s]')
-ylim([min_value-offset max_value+offset])
-
-subplot(2,2,4)
-plot(time, aligning_moment(:,4), 'b', 'Linewidth', 1)
-legend('rear right wheel', 'Location', 'best')
-grid on
 xlabel('Time [s]')
 ylim([min_value-offset max_value+offset])
 

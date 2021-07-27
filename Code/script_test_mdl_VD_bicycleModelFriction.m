@@ -104,4 +104,5 @@ fcn_VD_plotTimeWheelSpeed(time, States(:,(4:5)));
 fcn_VD_plotTrajectory(pose(:,[1,2]));
 fcn_VD_plotTimeYaw(time, pose(:,3));
 
+fcn_VD_plotTimeAligningMoment(time, Mz);
 fcn_VD_plotTimeFriction(time, friction_coefficients_estimate);
